@@ -1,14 +1,16 @@
-import React from 'react';
-import { Carousel, Container } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { Carousel, Container, Row } from 'react-bootstrap';
+
 
 const Home = () => {
+  
     return (
         <Container>
         <Carousel fade>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://solutionsreview.com/business-process-management/files/2020/06/TrackVia-Announces-New-Design-for-Low-Code-Platform.jpg"
+      src="https://thumbs.dreamstime.com/b/programming-code-laptop-screen-office-background-d-illustration-software-developing-coding-technologies-concept-computer-181544429.jpg"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -38,8 +40,11 @@ const Home = () => {
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
+   
 </Container>
-    );
+
+
+ );
 };
 
 export default Home;

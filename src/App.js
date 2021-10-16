@@ -9,13 +9,18 @@ import Header from './Component/Header/Header';
 import Services from './Component/Services/Services';
 import Aboutus from './Component/AboutUs/Aboutus';
 import Contactus from './Component/ContactUs/Contactus';
+import PageNot from './Component/PageNotFound/PageNot';
+import Footer from './Component/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
        <Router>
-         <Header></Header>
+         <Header></Header>         
           <Switch>
+           <Route exact path="/">
+             <Home></Home>
+           </Route>
            <Route path="/Home">
              <Home></Home>
            </Route>
@@ -28,7 +33,11 @@ function App() {
            <Route path="/Contactus">
              <Contactus></Contactus>
            </Route>
-         </Switch>        
+           <Route path="*">
+             <PageNot></PageNot>
+           </Route>
+         </Switch> 
+         <Footer></Footer>       
       </Router>
       
     </div>

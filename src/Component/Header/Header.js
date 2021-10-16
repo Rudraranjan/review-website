@@ -4,13 +4,14 @@ import { NavLink} from 'react-router-dom';
 import {LinkContainer} from 'react-router-bootstrap';
 
 
+
 const Header = () => {
     return (
         <Navbar bg="light" expand="lg">
         <Container>
             <LinkContainer to="/home"> 
              <Navbar.Brand >Easy Coding</Navbar.Brand>  
-        </LinkContainer> 
+            </LinkContainer> 
          
          <Navbar.Toggle aria-controls="basic-navbar-nav" />
          <Navbar.Collapse id="basic-navbar-nav">
@@ -29,9 +30,12 @@ const Header = () => {
             </LinkContainer>                       
         </Nav>
              </Navbar.Collapse>
-        </Container>
+             
+        </Container>        
         </Navbar>
         
+       
+
     );
 };
 
