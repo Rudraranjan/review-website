@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel, Container, Row } from 'react-bootstrap';
+import Homepro from '../Homepro/Homepro';
+
 
 
 const Home = () => {
+  const [courses, setCourses] = useState([]);
+    useEffect( () => {
+        fetch ('./fakedatenew.JSON')
+        .then(res => res.json())
+        .then (data => setCourses(data))
+    },[])
   
     return (
         <Container>
@@ -40,6 +48,14 @@ const Home = () => {
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
+
+<Row xs={1} md={2} className="g-4 mt-4"> 
+        {
+          courses.map(course => <Homepro
+          course = {course}
+          ></Homepro>)
+        }
+   </Row> 
    
 </Container>
 

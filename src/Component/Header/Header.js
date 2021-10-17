@@ -8,7 +8,7 @@ import {LinkContainer} from 'react-router-bootstrap';
 const Header = () => {
     return (
         <Navbar bg="light" expand="lg">
-        <Container>
+        <Container className="font-weight-bold">
             <LinkContainer to="/home"> 
              <Navbar.Brand >Easy Coding</Navbar.Brand>  
             </LinkContainer> 

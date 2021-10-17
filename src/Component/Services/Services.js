@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Sericepro from '../Servicepro/Servicepro';
 
-const Services = (props) => {
+const Services = () => {
     const [courses, setCourses] = useState([]);
     useEffect( () => {
         fetch ('./fakedata.JSON')
